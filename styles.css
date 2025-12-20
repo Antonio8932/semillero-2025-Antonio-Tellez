@@ -1,0 +1,159 @@
+/* =========================
+   VARIABLES DE COLOR
+========================= */
+:root {
+    --torpedo-bay: #1f3a5f;     /* Azul profundo */
+    --cameo-blue: #a7c7e7;      /* Azul claro */
+    --kairaku-beach: #4da3c7;   /* Azul vibrante */
+    --bg-light: #f4f7fb;
+    --text-dark: #2e2e2e;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: var(--torpedo-bay);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 0.85rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    background: white;
+    text-align: center;
+    padding: 55px 20px;
+    border-bottom: 4px solid var(--kairaku-beach);
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    color: var(--torpedo-bay);
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #4b5563;
+    margin-top: 12px;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+
+.section h2 {
+    font-size: 1.2rem;
+    color: var(--torpedo-bay);
+    margin-bottom: 20px;
+}
+
+/* =========================
+   BARRAS DE HABILIDADES
+========================= */
+.skill-stats {
+    margin-top: 20px;
+}
+
+.skill-stats .skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.skill-stats .skill i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: var(--kairaku-beach);
+}
+
+.skill-stats .skill span {
+    width: 120px;
+    font-weight: 600;
+    color: var(--torpedo-bay);
+}
+
+.skill-stats .progress {
+    flex: 1;
+    height: 20px;
+    background: var(--cameo-blue);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 15px;
+}
+
+.skill-stats .progress-bar {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--kairaku-beach), var(--torpedo-bay));
+    border-radius: 10px;
+    line-height: 20px;
+    color: white;
+    text-align: right;
+    padding-right: 5px;
+    font-weight: bold;
+    transition: width 2s ease-in-out;
+}
+
+/* =========================
+   ANIMACIÓN DE BARRAS
+========================= */
+.skill-stats .python { width: 70%; }
+.skill-stats .java { width: 75%; }
+.skill-stats .db { width: 65%; }
+.skill-stats .html { width: 80%; }
+.skill-stats .redes { width: 60%; }
