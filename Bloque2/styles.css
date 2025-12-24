@@ -1,0 +1,392 @@
+/* =========================
+   VARIABLES DE COLOR
+========================= */
+:root {
+    --torpedo-bay: #1f3a5f;     /* Azul profundo */
+    --cameo-blue: #a7c7e7;      /* Azul claro */
+    --kairaku-beach: #4da3c7;   /* Azul vibrante */
+    --bg-light: #f4f7fb;
+    --text-dark: #2e2e2e;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: var(--torpedo-bay);
+    padding: 10px 20px;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+/* =========================
+   BOTÓN IDIOMA
+========================= */
+.lang-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: white;
+    color: var(--torpedo-bay);
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    background: white;
+    text-align: center;
+    padding: 55px 20px;
+    border-bottom: 4px solid var(--kairaku-beach);
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    color: var(--torpedo-bay);
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #4b5563;
+    margin-top: 12px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+.btn-container {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background: var(--kairaku-beach);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--kairaku-beach);
+    color: var(--kairaku-beach);
+}
+
+.btn-outline:hover {
+    background: var(--kairaku-beach);
+    color: white;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+.section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.6s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section h2 {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--torpedo-bay);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d1d5db;
+    padding-bottom: 8px;
+}
+
+/* =========================
+   TEXTO GENERAL
+========================= */
+.section p {
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skill {
+    margin-bottom: 18px;
+}
+
+.skill span {
+    font-size: 0.85rem;
+    display: block;
+}
+
+.bar {
+    background: #e5e7eb;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 6px;
+}
+
+.progress {
+    height: 8px;
+    border-radius: 4px;
+    background: var(--kairaku-beach);
+}
+
+.python { width: 70%; }
+.html   { width: 80%; }
+.redes  { width: 65%; }
+.db     { width: 60%; }
+
+/* =========================
+   PROYECTOS
+========================= */
+.project {
+    margin-bottom: 18px;
+}
+
+.project h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--torpedo-bay);
+}
+
+.project p {
+    font-size: 0.9rem;
+}
+
+/* =========================
+   CERTIFICACIONES
+========================= */
+.cert-title {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--torpedo-bay);
+}
+
+.cert-list {
+    margin-left: 20px;
+    margin-top: 6px;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+.contact {
+    text-align: center;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: white;
+    background: var(--kairaku-beach);
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    transform: scale(1.1);
+    background: var(--torpedo-bay);
+}
+
+.contact-text {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--torpedo-bay);
+    word-break: break-word;
+}
+
+.contact-note {
+    margin-top: 18px;
+    font-size: 0.85rem;
+    color: #4b5563;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #6b7280;
+    padding: 25px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header h1 {
+        font-size: 1.7rem;
+    }
+
+    .subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+
+    .btn {
+        width: 90%;
+        max-width: 280px;
+    }
+
+    .contact-icons {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+/* =========================
+   BARRAS DE HABILIDADES
+========================= */
+.skill-stats {
+    margin-top: 20px;
+}
+
+.skill-stats .skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.skill-stats .skill i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: var(--kairaku-beach); /* Azul vibrante de tu paleta */
+}
+
+.skill-stats .skill span {
+    width: 120px;
+    font-weight: 600;
+    color: var(--torpedo-bay); /* Azul profundo para texto */
+}
+
+.skill-stats .progress {
+    flex: 1;
+    height: 20px;
+    background: var(--cameo-blue); /* Azul claro de fondo de barra */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 15px;
+}
+
+.skill-stats .progress-bar {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--kairaku-beach), var(--torpedo-bay));
+    border-radius: 10px;
+    line-height: 20px;
+    color: white;
+    text-align: right;
+    padding-right: 5px;
+    font-weight: bold;
+    transition: width 2s ease-in-out;
+}
